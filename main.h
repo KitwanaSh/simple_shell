@@ -10,8 +10,10 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
+#include <dirent.h>
+#include <signal.h>
 
-#define EXTERNAME_COMMAD 1
+#define EXTERNAL_COMMAND 1
 #define INTERNAL_COMMAND 2
 #define PATH_COMMAND 3
 #define INVALID_COMMAD -1
@@ -31,7 +33,7 @@ typedef struct org
 
 extern char **environ;
 extern char *line;
-extern char **commands
+extern char **commands;
 extern char *name_of_shell;
 extern int status;
 

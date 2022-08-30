@@ -1,4 +1,4 @@
-#nclude "shell.h
+#include "shell.h"
 
 	char **commands = NULL;
 	char *line = NULL;
@@ -7,6 +7,10 @@
 
 /**
  * main - run the functions and prototypes
+ *
+ * @argc: count the number of arguments
+ *
+ * @argv: pointer to the address of the first argument string
  *
  * Return: 0 on success
  */
