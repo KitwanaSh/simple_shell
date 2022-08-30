@@ -1,4 +1,4 @@
-#nclude "shell.h
+#nclude "main.h"
 
 	char **commands = NULL;
 	char *line = NULL;
@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 	size_t n = 0;
 	int i, type_commnad = 0;
 
-	signal(SIGINT, ctrl_c_handler);
+	signal(SIGINT, handler);
 	name_of = argv[0];
 	while (1)
 	{
