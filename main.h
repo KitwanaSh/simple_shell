@@ -38,6 +38,11 @@ extern int status;
 /* main prototypes */
 extern void initializer(char **curr_command, in type_command);
 extern void uniteractive(void);
+/* Used funtions */
+void parse_command(char *);
+void execute_command(char **, int);
+void (*get_func(char *))(char **);
+void *_getenv(char *);
 
 /* Built in prototypes */
 void env(char **);
