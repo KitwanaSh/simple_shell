@@ -46,6 +46,13 @@ void execute_command(char **, int);
 void (*get_func(char *))(char **);
 void *_getenv(char *);
 
+/* Pillar functions */
+char *_strtok(char *, char *, char **);
+int _atoi(char *);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+void handler(int);
+void remove_comment(char *);
+
 /* Built in prototypes */
 void env(char **);
 void quit(char **);
