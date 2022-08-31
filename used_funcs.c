@@ -1,6 +1,7 @@
 #include "main.h"
 
-/** parse_command - determines the type of the command
+/**
+ * parse_command - determines the type of the command
  * @command: The pased command
  *
  * Return: constant variable that represets

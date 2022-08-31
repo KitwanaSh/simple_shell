@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-#include "shell.h"
-=======
-#nclude "main.h"
->>>>>>> 6c3e9031246686792f8aad4de48ed9b2feb84453
+#include "main.h"
 
-	char **commands = NULL;
-	char *line = NULL;
-	char *name_of_shell = NULL;
-	int status = 0;
+char **commands = NULL;
+char *line = NULL;
+char *name_of_shell = NULL;
+int status = 0;
 
 /**
  * main - run the functions and prototypes

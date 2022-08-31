@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 /**
  *_strtok - A string to make token
@@ -106,7 +106,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 /**
  * handler - handles the signal raised by CTRL-C
- * @sign_um: signal number
+ * @sign_num: signal number
  *
  * Return: void
  */
