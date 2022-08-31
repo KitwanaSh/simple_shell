@@ -1,5 +1,13 @@
 #include "main.h"
 
+/*
+ *void interactive takes in void and return void
+ * char **curr_command is assigned null
+ * size_t n  is assigned 0
+ * int i and type_command is assigned 0
+ * free(line)
+ * exit(status)
+ */
 
 void uninteractive(void)
 {
