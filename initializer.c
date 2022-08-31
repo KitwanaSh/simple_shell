@@ -1,5 +1,14 @@
 #include "main.h"
 
+/*
+ * void initializer takes in pointer to pointer and an integer
+ *
+ * @ pointer 
+ *
+ * pid_t mypid calls the function **curr_command
+ *
+ * return void
+ */
 
 void initializer(char **curr_command, int type_command)
 {
