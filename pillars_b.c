@@ -88,14 +88,14 @@ int _strcspn(char *s1, char *s2)
 
 
 /**
- * tokenizer - Make token the entry to make it a string list
+ * tokenizer - make token the entry to make it a string list
  * @ent_str: parsed entry
  * @delim: delimiter in tring dat type
  *
  * Return: A token list
  */
 
-char **tokenizer(char *input_str, char *delim)
+char **tokenizer(char *ent_str, char *delim)
 {
 	int num_delim = 0;
 	char **av = NULL;
