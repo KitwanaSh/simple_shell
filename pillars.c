@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 /**
  *_strtok - A string to make token
