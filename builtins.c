@@ -3,13 +3,14 @@
 /**
  *env - Prints the current environnement
  * @command_tokened: command entered
- * 
+ *
  * Return: Nothing at all
  */
 
 void env(char **command_tokened)
 {
 	int i;
+
 	for (i = 0; environ[i] != NULL; i++)
 	{
 		print(environ[i], STDOUT_FILENO);
