@@ -3,7 +3,7 @@
 /*
  * void initializer takes in pointer to pointer and an integer
  *
- * @ pointer 
+ * @ pointer
  *
  * pid_t mypid calls the function **curr_command
  *
