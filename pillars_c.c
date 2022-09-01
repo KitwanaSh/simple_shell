@@ -1,5 +1,5 @@
 #include "main.h"
- 
+
 /**
  * print - the printing function
  * @string to stdout
@@ -75,7 +75,7 @@ int _strlen(char *string)
 /**
  * _strcmp - compare two strings
  * @str_1: first string to be compared
- * @sstr_2: second string to be compared
+ * @str_2: second string to be compared
  *
  * Return: result of two string
  */
@@ -83,6 +83,7 @@ int _strlen(char *string)
 int _strcmp(char *str_1, char *str_2)
 {
 	int i = 0;
+
 	while (str_1[i] != '\0')
 	{
 		if (str_1[i] != str_2[i])
