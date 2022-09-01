@@ -56,6 +56,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 void handler(int);
 void remove_comment(char *);
 void print(char *, int);
+int _strlen(char *);
+void _strcpy(char *, char *);
 
 /* Built in prototypes */
 void env(char **);
