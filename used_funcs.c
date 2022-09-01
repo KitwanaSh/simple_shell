@@ -30,7 +30,6 @@ int parse_command(char *command)
 		free(path);
 		return (PATH_COMMAND);
 	}
-
 	return (INVALID_COMMAND);
 }
 
@@ -114,11 +113,11 @@ char *_getenv(char *name)
 		for (gather_t = *my_environ, copy_name = name;
 		     *gather == *copy_name; gather++, copy_name++)
 		{
-			if (*gather == '=')
+			if (*gather_t == '=')
 				break;
 		}
-		if ((*gather == '=') && (*copy_name == '\0'))
-			return (gather + 1);
+		if ((*gather_t == '=') && (*copy_name == '\0'))
+			return (gather_t + 1);
 	}
 	return (NULL);
 }
