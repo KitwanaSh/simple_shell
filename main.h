@@ -31,6 +31,7 @@ typedef struct org
 	void (*fc)(char **command);
 } fc_org;
 
+/* external functions */
 extern char **environ;
 extern char *line;
 extern char **commands;
@@ -40,11 +41,13 @@ extern int status;
 /* main prototypes */
 extern void initializer(char **curr_command, in type_command);
 extern void uniteractive(void);
+
 /* Used funtions */
 void parse_command(char *);
 void execute_command(char **, int);
 void (*get_func(char *))(char **);
 void *_getenv(char *);
+char *get_path(char *);
 
 /* Pillar functions */
 char *_strtok(char *, char *, char **);
