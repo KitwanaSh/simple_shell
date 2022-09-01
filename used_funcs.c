@@ -126,7 +126,8 @@ char *_getenv(char *name)
 /**
  * check_path - checks if a command is found in the PATH
  * @command: used command
- * return: NULL
+ *
+ * Return: NULL if fails
  */
 char *check_path(char *command)
 {
@@ -156,5 +157,5 @@ char *check_path(char *command)
 	}
 	free(path_cpy);
 	free(path_array);
-	return(NULL);
+	return (NULL);
 }
