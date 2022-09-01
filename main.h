@@ -55,6 +55,7 @@ int _atoi(char *);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 void handler(int);
 void remove_comment(char *);
+void print(char *, int);
 
 /* Built in prototypes */
 void env(char **);
