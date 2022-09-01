@@ -58,6 +58,8 @@ void remove_comment(char *);
 void print(char *, int);
 int _strlen(char *);
 void _strcpy(char *, char *);
+char *_strcat(char *, char *);
+char **tokenizer(char *, char *);
 
 /* Built in prototypes */
 void env(char **);
