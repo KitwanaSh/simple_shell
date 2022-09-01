@@ -64,7 +64,7 @@ void remove_newline(char *);
 int _strspn(char *, char *);
 int _strcspn(char *, char *);
 char *_strchr(char *, char);
-
+int _strcmp(char *, char *);
 
 /* Built in prototypes */
 void env(char **);
