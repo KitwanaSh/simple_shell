@@ -21,8 +21,8 @@
 #define min(n, m) (((n) < (m)) ? (n) : (m))
 
 /**
- * struc org - the structure the organizes the command to the function
- * @name_of_com: name of the command
+ * struct org - the structure the organizes the command to the function
+ * @name_of_command: name of the command
  * @fc: the funtion that exectutes that spacific command
  */
 typedef struct org
