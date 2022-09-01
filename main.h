@@ -60,6 +60,8 @@ int _strlen(char *);
 void _strcpy(char *, char *);
 char *_strcat(char *, char *);
 char **tokenizer(char *, char *);
+void remove_newline(char *);
+int _strspn(char *, char *);
 
 /* Built in prototypes */
 void env(char **);
