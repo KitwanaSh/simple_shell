@@ -62,6 +62,9 @@ char *_strcat(char *, char *);
 char **tokenizer(char *, char *);
 void remove_newline(char *);
 int _strspn(char *, char *);
+int _strcspn(char *, char *);
+char *_strchr(char *, char);
+
 
 /* Built in prototypes */
 void env(char **);
