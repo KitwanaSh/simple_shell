@@ -111,7 +111,7 @@ char *_getenv(char *name)
 	for (my_environ = environ; *my_environ != NULL; my_environ++)
 	{
 		for (gather_t = *my_environ, copy_name = name;
-		     *gather == *copy_name; gather++, copy_name++)
+		     *gather_t == *copy_name; gather_t++, copy_name++)
 		{
 			if (*gather_t == '=')
 				break;
