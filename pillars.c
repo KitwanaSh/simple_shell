@@ -136,23 +136,3 @@ void remove_comment(char *input)
 	}
 	input[i] = '\0';
 }
-
-/**
- * _strcmp - compare two strings
- * @str_1: first string to be compared
- * @sstr_2: second string to be compared
- *
- * Return: result of two strings
- */
-
-int _strcmp(char *str_1, char *str_2)
-{
-	int i = 0;
-	while (str_1[i] != '\0')
-	{
-		if (str_1[i] != str_2[i])
-			break;
-		i++;
-	}
-	return (str_1[i] - str_2[i]);
-}
