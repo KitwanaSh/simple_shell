@@ -14,9 +14,9 @@ int parse_command(char *command)
 	char *path = NULL;
 	char *intern_command[] = {"env", "exit", NULL};
 
-	for (i = 0; command[i] != "\0"; i++)
+	for (i = 0; command[i] != '\0'; i++)
 	{
-		if (command[i] == "/")
+		if (command[i] == '/')
 			return (EXTERNAL_COMMAND);
 	}
 	for (i = 0; intern_command[i] != NULL; i++)
@@ -24,12 +24,13 @@ int parse_command(char *command)
 		if (_strcmp(command, intern_command[i]) == 0)
 			return (INTERNAL_COMMAND);
 	}
-	path = check_path(command);
+	path = get_path(command);
 	if (path != NULL)
 	{
 		free(path);
 		return (PATH_COMMAND);
 	}
+
 	return (INVALID_COMMAND);
 }
 
@@ -54,7 +55,7 @@ void execute_command(char **command_tokened, int command_type)
 	}
 	if (command_type == PATH_COMMAND)
 	{
-		if (execve(check_path(command_tokened[0]), command_tokened, NULL) == -1)
+		if (execve(get_path(command_tokened[0]), command_tokened, NULL) == -1)
 		{
 			perror(_getenv("PWD"));
 			exit(2);
@@ -76,59 +77,12 @@ void execute_command(char **command_tokened, int command_type)
 }
 
 /**
- * get_func - gets the function
- * @command: the entered command
- *
- * Return: Nothing
- */
-void (*get_func(char *command))(char **)
-{
-	int i;
-	func_org org_sing[] = {
-		{"env", env}, {"exit", quit}
-	};
-
-	for (i = 0; i < 2; i++)
-	{
-		if (_strcmp(command, org_sing[i].name_of_command) == 0)
-			return (org_sing[i].func);
-	}
-	return (NULL);
-}
-
-/**
- * _getenv - gets the value of an environment variable
- * @name: name of the environment variable
- *
- * Return: variable  value of success or NULL if fails
- */
-char *_getenv(char *name)
-{
-	char **my_environ;
-	char *gather_t;
-	char *copy_name;
-
-	for (my_environ = environ; *my_environ != NULL; my_environ++)
-	{
-		for (gather_t = *my_environ, copy_name = name;
-		     *gather_t == *copy_name; gather_t++, copy_name++)
-		{
-			if (*gather_t == '=')
-				break;
-		}
-		if ((*gather_t == '=') && (*copy_name == '\0'))
-			return (gather_t + 1);
-	}
-	return (NULL);
-}
-
-/**
  * check_path - checks if a command is found in the PATH
  * @command: used command
  *
  * Return: NULL if fails
  */
-char *check_path(char *command)
+char *get_path(char *command)
 {
 	char **path_array = NULL;
 	char *temp, *temp2, *path_cpy;
@@ -156,5 +110,52 @@ char *check_path(char *command)
 	}
 	free(path_cpy);
 	free(path_array);
+	return (NULL);
+}
+
+/**
+ * get_func - gets the function
+ * @command: the entered command
+ *
+ * Return: Nothing
+ */
+void (*get_func(char *command))(char **)
+{
+	int i;
+	fc_org org_sing[] = {
+		{"env", env}, {"exit", quit}
+	};
+
+	for (i = 0; i < 2; i++)
+	{
+		if (_strcmp(command, org_sing[i].name_of_command) == 0)
+			return (org_sing[i].fc);
+	}
+	return (NULL);
+}
+
+/**
+ * _getenv - gets the value of an environment variable
+ * @name: name of the environment variable
+ *
+ * Return: variable  value of success or NULL if fails
+ */
+char *_getenv(char *name)
+{
+	char **my_environ;
+	char *gather_t;
+	char *copy_name;
+
+	for (my_environ = environ; *my_environ != NULL; my_environ++)
+	{
+		for (gather_t = *my_environ, copy_name = name;
+		     *gather_t == *copy_name; gather_t++, copy_name++)
+		{
+			if (*gather_t == '=')
+				break;
+		}
+		if ((*gather_t == '=') && (*copy_name == '\0'))
+			return (gather_t + 1);
+	}
 	return (NULL);
 }

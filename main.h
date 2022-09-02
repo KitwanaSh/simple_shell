@@ -16,7 +16,7 @@
 #define EXTERNAL_COMMAND 1
 #define INTERNAL_COMMAND 2
 #define PATH_COMMAND 3
-#define INVALID_COMMAD -1
+#define INVALID_COMMAND -1
 
 #define min(n, m) (((n) < (m)) ? (n) : (m))
 
@@ -39,14 +39,14 @@ extern char *name_of_shell;
 extern int status;
 
 /* main prototypes */
-extern void initializer(char **curr_command, in type_command);
+extern void initializer(char **curr_command, int type_command);
 extern void uniteractive(void);
 
 /* Used funtions */
-void parse_command(char *);
+int parse_command(char *);
 void execute_command(char **, int);
 void (*get_func(char *))(char **);
-void *_getenv(char *);
+char *_getenv(char *);
 char *get_path(char *);
 
 /* Pillar functions */

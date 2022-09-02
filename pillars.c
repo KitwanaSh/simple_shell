@@ -36,7 +36,7 @@ char *_strtok(char *_str, char *delim, char **save_ptr)
 	}
 
 	*terminate = '\0';
-	*save_ptr = finish + 1;
+	*save_ptr = terminate + 1;
 	return (_str);
 }
 
@@ -56,7 +56,7 @@ int _atoi(char *t)
 		else if ((*t < '0' || *t > '9') && *t != '\0')
 			return (-1);
 		else if (*t >= '0'  && *t <= '9')
-			y = (y * 10) + (*y - '0');
+			y = (y * 10) + (*t - '0');
 		else if (y > 0)
 			break;
 	} while (*t++);

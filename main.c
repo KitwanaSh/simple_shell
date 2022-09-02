@@ -1,9 +1,9 @@
 #include "main.h"
 
-/*char **commands = NULL;*/
-/*char *line = NULL;*/
-/*char *name_of_shell = NULL;*/
-/*int status = 0;*/
+char **commands = NULL;
+char *line = NULL;
+char *name_of_shell = NULL;
+int status = 0;
 
 /**
  * main - run the functions and prototypes
@@ -16,17 +16,17 @@
  */
 
 
-int main(int argc, char **argv)
+int main(int argc __attribute__((unused)), char **argv)
 {
 	char **curr_command = NULL;
 	size_t n = 0;
-	int i, type_commnad = 0;
+	int i, type_command = 0;
 
 	signal(SIGINT, handler);
-	name_of = argv[0];
+	name_of_shell = argv[0];
 	while (1)
 	{
-		uninteractive();
+		uniteractive();
 		print(" ($) ", STDOUT_FILENO);
 		if (getline(&line, &n, stdin) == -1)
 		{

@@ -60,7 +60,7 @@ char *_strcat(char *meeting, char *prep)
 	n_string = malloc(sizeof(*n_string) * (len_meet + len_prep + 1));
 	_strcpy(meeting, n_string);
 	_strcpy(prep, n_string + len_prep);
-	_string[len_meet + len_prep] = '\0';
+	n_string[len_meet + len_prep] = '\0';
 	return (n_string);
 }
 
@@ -102,13 +102,13 @@ char **tokenizer(char *ent_str, char *delim)
 	char *token = NULL;
 	char *save_ptr = NULL;
 
-	token = _strtok_r(ent_str, delim, &save_ptr);
+	token = _strtok(ent_str, delim, &save_ptr);
 
 	while (token != NULL)
 	{
 		av = _realloc(av, sizeof(*av) * num_delim, sizeof(*av) * (num_delim + 1));
 		av[num_delim] = token;
-		token = _strtok_r(NULL, delim, &save_ptr);
+		token = _strtok(NULL, delim, &save_ptr);
 		num_delim++;
 	}
 	av = _realloc(av, sizeof(*av) * num_delim, sizeof(*av) * (num_delim + 1));

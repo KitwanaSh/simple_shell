@@ -23,7 +23,7 @@ void initializer(char **curr_command, int type_command)
 		}
 		else
 		{
-			waitpid(myipd, &status, 0);
+			waitpid(mypid, &status, 0);
 			status >>= 0;
 		}
 	}

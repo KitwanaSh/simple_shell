@@ -7,7 +7,7 @@
  * Return: Nothing at all
  */
 
-void env(char **command_tokened)
+void env(char **command_tokened __attribute__((unused)))
 {
 	int i;
 
@@ -24,11 +24,11 @@ void env(char **command_tokened)
  *
  * Return: Nothing
  */
-void (char **command_tokened)
+void quit(char **command_tokened)
 {
 	int number_token = 0, arg;
 
-	for (; commad_tokened[number_token] != NULL; number_token++)
+	for (; command_tokened[number_token] != NULL; number_token++)
 		;
 	if (number_token == 1)
 	{
@@ -39,13 +39,13 @@ void (char **command_tokened)
 	}
 	else if (number_token == 2)
 	{
-		agr = _atoi(command_tokened[1]);
+		arg = _atoi(command_tokened[1]);
 		if (arg == -1)
 		{
-			printf(name_of_shell, STRERR_FILENO);
-			printf(": 1: Exit uncommited number: ", STDERR_FILENO);
-			printf(command_tokened[1], STDERR_FILENO);
-			printf("\n", STDERR_FILENO);
+			print(name_of_shell, STDERR_FILENO);
+			print(": 1: Exit: uncommited number: ", STDERR_FILENO);
+			print(command_tokened[1], STDERR_FILENO);
+			print("\n", STDERR_FILENO);
 			status = 2;
 		}
 		else
@@ -58,6 +58,6 @@ void (char **command_tokened)
 	}
 	else
 	{
-		printf("$: Exit does not take many arguments\n", STDERR_FILENO);
+		print("$: Exit does not take many arguments\n", STDERR_FILENO);
 	}
 }
