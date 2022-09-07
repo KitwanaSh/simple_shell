@@ -77,7 +77,7 @@ void execute_command(char **command_tokened, int command_type)
 }
 
 /**
- * check_path - checks if a command is found in the PATH
+ * get_path - checks if a command is found in the PATH
  * @command: used command
  *
  * Return: NULL if fails

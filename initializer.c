@@ -1,13 +1,11 @@
 #include "main.h"
 
-/*
- * void initializer takes in pointer to pointer and an integer
+/**
+ * initializer - takes in pointer to pointer and an integer
+ * @curr_command: double pointer to the current command
+ * @type_command: mypid calls the function **curr_command
  *
- * @ pointer
- *
- * pid_t mypid calls the function **curr_command
- *
- * return void
+ * Return: Nothing
  */
 
 void initializer(char **curr_command, int type_command)
