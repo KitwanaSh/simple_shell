@@ -1,10 +1,5 @@
 #include "main.h"
 
-char **commands = NULL;
-char *line = NULL;
-char *name_of_shell = NULL;
-int status = 0;
-
 /**
  * main - run the functions and prototypes
  *
@@ -17,9 +12,9 @@ int status = 0;
 
 int main(int argc __attribute__((unused)), char **argv)
 {
-	char **curr_command = NULL;
+	char **curr_command, *name_of_shell, *line, **commands = NULL;
 	size_t n = 0;
-	int i, type_command = 0;
+	int i, type_command, status = 0;
 
 	signal(SIGINT, handler);
 	name_of_shell = argv[0];
