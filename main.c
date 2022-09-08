@@ -1,5 +1,10 @@
 #include "main.h"
 
+char **commands = NULL;
+char *line = NULL;
+char *name_of_shell = NULL;
+int status = 0;
+
 /**
  * main - run the functions and prototypes
  *
@@ -12,10 +17,6 @@
 
 int main(int argc __attribute__((unused)), char **argv)
 {
-	char **commands = NULL;
-	char *line = NULL;
-	char *name_of_shell = NULL;
-	int status = 0;
 	char **curr_command = NULL;
 	size_t n = 0;
 	int i, type_command = 0;
