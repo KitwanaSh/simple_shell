@@ -1,4 +1,4 @@
-
+#include "main.h"
 
 /**
  * **strtow - splits a string into words. Repeat delimiters are ignored

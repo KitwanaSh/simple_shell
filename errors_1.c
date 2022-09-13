@@ -1,4 +1,4 @@
-
+#include "main.h"
 
 /**
  *_eputs - prints an input string
@@ -37,7 +37,7 @@ int _eputchar(char c)
 		i = 0;
 	}
 	if (c != BUF_FLUSH)
-		buf[i++] = c
+		buf[i++] = c;
 	return (1);
 }
 

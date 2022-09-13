@@ -1,4 +1,4 @@
-
+#include "main.h"
 
 /**
  * input_buf - buffers chained commands
