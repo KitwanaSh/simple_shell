@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * main - entry point
- * @ac: arg count
- * @av: arg vector
+ * main - check the code
+ * @ac: arg counts
+ * @av: arg vector for pointers
  *
- * Return: 0 on success, 1 on error
+ * Return: 0 on success, 1 on fail
  */
 int main(int ac, char **av)
 {
